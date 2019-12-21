@@ -1,0 +1,19 @@
+1.mztestpro 测试项目
+    bbs: 用于存放 BBS 项目的测试用例、测试报告和测试数据等。
+    driver: 用于存放浏览器驱动。如selenium-server-standalone-2.47.0.jar、chromedriver.exe、
+            IEDriverServer.exe 等。在执行测试前根据执行场景将浏览器驱动复制到系统环境变量 path 目录下。
+    package: 用于存放自动化所用到的扩展包。例如，HTMLTestRunner.py 属于一个单独模块，并且对其做了修改，所以，
+            在执行测试前需要将它复制到 Python 的Lib 目录下。
+    run_bbs_test.py: 项目主程序。用来运行社区 （BBS) 自动化用例。
+    startup.bat: 用于启动 Selenium Server 默认启动 driver 目录下的selenium-server-standalone-2.47.0.jar
+
+2.bbs 目录
+    data: 该目录用来存放测试相关的数据。
+    report: 用于存放 HTML 测试报告。其下面创建了 image 目录用于存放测试过程中的截图。
+    test_case: 测试用例目录，用于存放测试用例及相关模块。
+
+3. test_case 目录
+    models: 该目录下存放了一些公共的配置函数及公共类。
+    page_obj: 该目录用于存放测试用例的员面对象（Page Object)。
+                根据自定义规则，以 “*Page.py”命名的文件为封装的页面对象文件。
+    *_sta.py: 测试用例文件。根据测试文件匹配规则，以 “*_sta.py” 命名的文件将被当作自动化测试用例执行。
