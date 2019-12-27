@@ -9,11 +9,11 @@ from mztestpro.bbs.test_case.page_obj.loginPage import Login
 class LoginTest(myunit.MyTest):
     """ 社区登录测试 """
 
-    # 测试用户登录
+    # 测试用户登录，提供两个默认值
     def user_login_verify(self, username="", password=""):
         Login(self.driver).user_login(username, password)
 
-    def test_loginl(self):
+    def test_login1(self):
         """ 用户名、密码为空登录 """
         self.user_login_verify()
         po = Login(self.driver)

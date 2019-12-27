@@ -51,10 +51,10 @@ class Login(Page):
     def user_error_hint(self):
         return self.find_element(*self.user_error_hint_loc).text
 
-    # 密码错误提示r
+    # 密码错误提示
     def pawd_error_hint(self):
         return self.find_element(*self.pawd_error_hint_loc).text
 
-    # 登录成功用户名
+    # 登录成功提示
     def user_login_success(self):
         return self.find_element(*self.user_login_success_loc).text

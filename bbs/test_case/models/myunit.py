@@ -7,10 +7,13 @@ import os
 
 class MyTest(unittest.TestCase):
 
-    def setUp(self):
-        self.driver = browser()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
+    driver = browser()
 
-    def tearDown(self):
-        self.driver.quit()
+    @classmethod
+    def setUpClass(cls):
+        cls.driver.implicitly_wait(10)
+        cls.driver.maximize_window()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
